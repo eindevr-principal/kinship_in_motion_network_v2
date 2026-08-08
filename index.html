@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kinship In Motion</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        /* light (default) */
+        --surface: #fcfcfb;
+        --ink: #0b0b0b;
+        --ink-2: #52514e;
+        --muted: #898781;
+        --hairline: rgba(11, 11, 11, 0.12);
+        --panel: rgba(252, 252, 251, 0.92);
+        --node: #46443f;
+        --node-dim: rgba(70, 68, 63, 0.15);
+        --node-faint: #b7b4ab;
+        --fam-kin: #2a78d6;
+        --fam-labor: #eb6834;
+        --fam-comm: #1baf7a;
+        --fam-other: #898781;
+        --edge-dim: rgba(137, 135, 129, 0.12);
+        --accent: #b0472b;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --surface: #1a1a19;
+          --ink: #ffffff;
+          --ink-2: #c3c2b7;
+          --muted: #898781;
+          --hairline: rgba(255, 255, 255, 0.14);
+          --panel: rgba(26, 26, 25, 0.92);
+          --node: #d7d5cc;
+          --node-dim: rgba(215, 213, 204, 0.15);
+          --node-faint: #6b6963;
+          --fam-kin: #3987e5;
+          --fam-labor: #d95926;
+          --fam-comm: #199e70;
+          --fam-other: #898781;
+          --edge-dim: rgba(137, 135, 129, 0.14);
+          --accent: #e8916f;
+        }
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; height: 100%; }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: var(--surface);
+        overflow: hidden;
+      }
+      #sigma-container { position: absolute; inset: 0; background: var(--surface); }
+
+      .overlay { position: absolute; z-index: 5; }
+
+      /* Title */
+      #titlebar {
+        top: 18px; left: 20px; max-width: 60%;
+      }
+      #titlebar h1 {
+        margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
+      }
+      #titlebar p {
+        margin: 4px 0 0; font-size: 12.5px; color: var(--ink-2); line-height: 1.4;
+      }
+
+      /* Controls (top-right) */
+      #controls {
+        top: 16px; right: 16px; width: 250px;
+        background: var(--panel);
+        backdrop-filter: blur(8px);
+        border: 1px solid var(--hairline);
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+      }
+      #controls label.blocklabel {
+        display: block; font-size: 10.5px; text-transform: uppercase;
+        letter-spacing: 0.06em; color: var(--muted); margin: 2px 0 5px;
+      }
+      #search, #relfilter {
+        width: 100%; padding: 7px 9px; font-size: 13px;
+        border: 1px solid var(--hairline); border-radius: 8px;
+        background: var(--surface); color: var(--ink); font-family: inherit;
+      }
+      #relfilter { margin-bottom: 4px; cursor: pointer; }
+      .divider { height: 1px; background: var(--hairline); margin: 11px 0; }
+
+      .legend-item {
+        display: flex; align-items: center; gap: 8px;
+        padding: 4px 6px; margin: 1px -6px; border-radius: 7px;
+        cursor: pointer; user-select: none; font-size: 12.5px;
+      }
+      .legend-item:hover { background: var(--node-dim); }
+      .legend-item.off { opacity: 0.38; }
+      .swatch { width: 13px; height: 13px; border-radius: 3px; flex: 0 0 auto; }
+      .legend-item .count { margin-left: auto; color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+
+      .hint { font-size: 11px; color: var(--muted); margin-top: 10px; line-height: 1.45; }
+
+      /* Info panel (right, slides in) */
+      #info-panel {
+        top: 0; right: 0; height: 100%; width: 360px; max-width: 90vw;
+        background: var(--panel);
+        backdrop-filter: blur(10px);
+        border-left: 1px solid var(--hairline);
+        box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+        padding: 22px 22px 40px; overflow-y: auto;
+        transform: translateX(100%); transition: transform 0.28s ease;
+        z-index: 20;
+      }
+      #info-panel.open { transform: translateX(0); }
+      #info-close {
+        position: absolute; top: 14px; right: 14px;
+        border: none; background: none; font-size: 24px; line-height: 1;
+        color: var(--ink-2); cursor: pointer; padding: 4px;
+      }
+      #info-content h2 { margin: 0 26px 2px 0; font-size: 20px; letter-spacing: -0.01em; }
+      #info-content .altnames { color: var(--ink-2); font-size: 13px; margin: 0 0 14px; }
+      #info-content .field { margin: 0 0 12px; }
+      #info-content .field .k {
+        font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em;
+        color: var(--muted); margin-bottom: 2px;
+      }
+      #info-content .field .v { font-size: 13.5px; line-height: 1.5; white-space: pre-wrap; }
+      #info-content .bio { font-size: 13.5px; line-height: 1.6; color: var(--ink); }
+      #rel-list { list-style: none; padding: 0; margin: 0; }
+      #rel-list li {
+        display: flex; align-items: baseline; gap: 8px;
+        padding: 6px 0; border-bottom: 1px solid var(--hairline); font-size: 13px;
+      }
+      #rel-list li:last-child { border-bottom: none; }
+      #rel-list .reltype {
+        flex: 0 0 auto; font-size: 10.5px; text-transform: uppercase;
+        letter-spacing: 0.04em; padding: 2px 6px; border-radius: 5px;
+        color: #fff; white-space: nowrap;
+      }
+      #rel-list .relname { cursor: pointer; text-decoration: underline dotted; text-underline-offset: 2px; }
+      #rel-list .relname:hover { color: var(--accent); }
+
+      /* Status banner */
+      #status {
+        left: 50%; top: 50%; transform: translate(-50%, -50%);
+        text-align: center; color: var(--ink-2); font-size: 14px;
+      }
+      #status.error { color: var(--accent); max-width: 440px; }
+      #status.hidden { display: none; }
+      .spinner {
+        width: 26px; height: 26px; margin: 0 auto 12px;
+        border: 3px solid var(--node-dim); border-top-color: var(--accent);
+        border-radius: 50%; animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      @media (max-width: 640px) {
+        #controls { width: 210px; }
+        #titlebar { max-width: 46%; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sigma-container"></div>
+
+    <div id="titlebar" class="overlay">
+      <h1>Kinship In Motion</h1>
+      <p>A network of enslaved people and their relationships, drawn from the Thistlewood diaries.</p>
+    </div>
+
+    <div id="controls" class="overlay">
+      <label class="blocklabel" for="search">Find a person</label>
+      <input id="search" list="people-list" placeholder="Search by name…" autocomplete="off" />
+      <datalist id="people-list"></datalist>
+
+      <div class="divider"></div>
+
+      <label class="blocklabel" for="relfilter">Show relationship type</label>
+      <select id="relfilter"><option value="__all">All relationships</option></select>
+
+      <div class="divider"></div>
+
+      <label class="blocklabel">Relationship families <span style="text-transform:none;letter-spacing:0">(click to toggle)</span></label>
+      <div id="legend"></div>
+
+      <p class="hint" id="counts"></p>
+    </div>
+
+    <div id="info-panel" class="overlay">
+      <button id="info-close" aria-label="Close">×</button>
+      <div id="info-content"></div>
+    </div>
+
+    <div id="status" class="overlay"><div class="spinner"></div>Loading the network…</div>
+
+    <script>
+      // Friendly fallback if the graph libraries can't be fetched (offline, CDN blocked).
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const s = document.getElementById("status");
+          if (s && !s.classList.contains("hidden") && !s.classList.contains("error")) {
+            s.className = "overlay error";
+            s.innerHTML = "The graph libraries couldn't load. Check your internet connection and refresh the page.";
+          }
+        }, 12000);
+      });
+    </script>
+
+    <script type="module">
+      import Graph from "https://cdn.jsdelivr.net/npm/graphology@0.26.0/+esm";
+      import Sigma from "https://cdn.jsdelivr.net/npm/sigma@3.0.2/+esm";
+      import forceAtlas2 from "https://cdn.jsdelivr.net/npm/graphology-layout-forceatlas2@0.10.1/+esm";
+      import Papa from "https://cdn.jsdelivr.net/npm/papaparse@5.5.3/+esm";
+
+      /* ---------- config: which relationship labels belong to which family ---------- */
+      const FAMILIES = {
+        kin:   { label: "Family & kinship",     varname: "--fam-kin"   },
+        labor: { label: "Labor & care",         varname: "--fam-labor" },
+        comm:  { label: "Community & culture",  varname: "--fam-comm"  },
+        other: { label: "Other",                varname: "--fam-other" },
+      };
+      const LABEL_FAMILY = {
+        "MOTHER OF": "kin", "FATHER OF": "kin", "DAUGHTER OF": "kin", "SON OF": "kin",
+        "SISTER OF": "kin", "BROTHER OF": "kin", "AUNT OF": "kin", "NEPHEW OF": "kin",
+        "DOMESTIC PARTNER OF": "kin", "HOUSEMATE OF": "kin",
+        "FIELD GANG [FIRST]": "labor", "BUSINESS PARTNER OF": "labor", "MIDWIFE TO": "labor",
+        "NURSE OF/FOR": "labor", "WETNURSE OF": "labor", "CAREGIVER OF/FOR": "labor",
+        "SEASONER TO": "labor", "SEASONEE OF": "labor", "GARDENER": "labor",
+        "FRIEND OF": "comm", "SHIPMATE OF": "comm", "IGBO": "comm", "CONGO": "comm",
+        "AFRICAN": "comm", "ANANSI STORYTELLER TO": "comm", "MYAL PRACTITIONER WITH": "comm",
+      };
+      const cssVar = (name) =>
+        getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+      const norm = (s) => (s || "").replace(/\s+/g, " ").trim();
+      const famOf = (label) => LABEL_FAMILY[norm(label).toUpperCase()] || "other";
+
+      /* ---------- glossary columns ---------- */
+      const G = {
+        id: "PERSON ID", name: "NAME", other: "OTHER NAMES",
+        ethnicity: "ETHNICITY/NATIONALITY", descriptors: "PHYSICAL DESCRIPTORS",
+        locations: "LOCATION(S)", bio: "BIOGRAPHICAL INFORMATION",
+      };
+      const R = { src: "PERSON ID", label: "Label", targets: "RELATION IDS" };
+
+      const statusEl = document.getElementById("status");
+      const showError = (msg) => {
+        statusEl.className = "overlay error";
+        statusEl.innerHTML = msg;
+      };
+
+      async function main() {
+        let glossaryText, relText;
+        try {
+          [glossaryText, relText] = await Promise.all([
+            fetch("kim_glossary.csv").then((r) => { if (!r.ok) throw new Error("kim_glossary.csv"); return r.text(); }),
+            fetch("kim_relationships.csv").then((r) => { if (!r.ok) throw new Error("kim_relationships.csv"); return r.text(); }),
+          ]);
+        } catch (e) {
+          showError(`Couldn't load <b>${e.message}</b>. Make sure both CSV files sit next to index.html.`);
+          return;
+        }
+
+        const glossary = Papa.parse(glossaryText, { header: true, skipEmptyLines: "greedy" }).data;
+        const rels = Papa.parse(relText, { header: true, skipEmptyLines: "greedy" }).data;
+
+        // index people from the glossary (P-prefixed only; L-ids are locations)
+        const people = new Map();
+        for (const row of glossary) {
+          const id = norm(row[G.id]);
+          if (!id.startsWith("P")) continue;
+          people.set(id, {
+            id,
+            name: norm(row[G.name]) || id,
+            other: norm(row[G.other]),
+            ethnicity: norm(row[G.ethnicity]),
+            descriptors: norm(row[G.descriptors]),
+            locations: norm(row[G.locations]),
+            bio: (row[G.bio] || "").trim(),
+          });
+        }
+
+        // build the graph: nodes = people who appear in a relationship
+        const graph = new Graph({ multi: false, type: "undirected" });
+        const relationsByNode = new Map(); // id -> [{label, otherId, dir}]
+        const famCounts = { kin: 0, labor: 0, comm: 0, other: 0 };
+        let skipped = 0;
+
+        const ensureNode = (id) => {
+          if (graph.hasNode(id)) return true;
+          const p = people.get(id);
+          if (!p) return false;
+          graph.addNode(id, { ...p, label: p.name });
+          relationsByNode.set(id, []);
+          return true;
+        };
+
+        for (const row of rels) {
+          const src = norm(row[R.src]);
+          const targetsRaw = norm(row[R.targets]);
+          if (!targetsRaw) continue; // role/attribute row, not an edge
+          const label = norm(row[R.label]);
+          const fam = famOf(label);
+          const targets = targetsRaw.split(/[;,]/).map((t) => t.trim()).filter(Boolean);
+          for (const tgt of targets) {
+            if (!people.has(src) || !people.has(tgt) || src === tgt) { skipped++; continue; }
+            ensureNode(src); ensureNode(tgt);
+            relationsByNode.get(src).push({ label, otherId: tgt, dir: "out" });
+            relationsByNode.get(tgt).push({ label, otherId: src, dir: "in" });
+            const key = [src, tgt].sort().join(" ");
+            if (graph.hasEdge(src, tgt)) {
+              const rels = graph.getEdgeAttribute(src, tgt, "relations");
+              rels.push({ src, tgt, label, fam });
+            } else {
+              graph.addEdge(src, tgt, { relations: [{ src, tgt, label, fam }], family: fam });
+            }
+            famCounts[fam]++;
+          }
+        }
+
+        if (!graph.order) {
+          showError("No relationships found to display. Check that the CSV columns match.");
+          return;
+        }
+
+        // Add every remaining person from the glossary as an (as yet) unconnected
+        // node, so the whole community is visible and searchable — not only the
+        // people who already have relationships coded.
+        let unconnectedCount = 0;
+        for (const [id, p] of people) {
+          if (!graph.hasNode(id)) {
+            graph.addNode(id, { ...p, label: p.name, connected: false });
+            relationsByNode.set(id, []);
+            unconnectedCount++;
+          }
+        }
+
+        // node size/colour: linked people scale by degree, unlinked are faint dots
+        graph.forEachNode((id) => {
+          const deg = graph.degree(id);
+          const linked = deg > 0;
+          graph.setNodeAttribute(id, "degree", deg);
+          graph.setNodeAttribute(id, "connected", linked);
+          graph.setNodeAttribute(id, "size", linked ? 4 + Math.sqrt(deg) * 2.4 : 2.6);
+          const base = linked ? cssVar("--node") : cssVar("--node-faint");
+          graph.setNodeAttribute(id, "baseColor", base);
+          graph.setNodeAttribute(id, "color", base);
+        });
+        graph.forEachEdge((e) => {
+          const fam = graph.getEdgeAttribute(e, "family");
+          graph.setEdgeAttribute(e, "baseColor", cssVar(FAMILIES[fam].varname));
+          graph.setEdgeAttribute(e, "color", cssVar(FAMILIES[fam].varname));
+          graph.setEdgeAttribute(e, "size", 1.4);
+        });
+
+        // --- layout ---
+        // Force-direct only the connected people, so the 395 unlinked dots don't
+        // distort the network. Then arrange the unlinked people in a tidy halo of
+        // concentric rings around the outside.
+        const connectedIds = graph.filterNodes((id, a) => a.connected);
+        const layoutGraph = new Graph({ type: "undirected" });
+        connectedIds.forEach((id, k) => {
+          const a = (2 * Math.PI * k) / connectedIds.length;
+          layoutGraph.addNode(id, { x: Math.cos(a), y: Math.sin(a), size: graph.getNodeAttribute(id, "size") });
+        });
+        graph.forEachEdge((e, attr, s, t) => {
+          if (layoutGraph.hasNode(s) && layoutGraph.hasNode(t) && !layoutGraph.hasEdge(s, t)) layoutGraph.addEdge(s, t);
+        });
+        const settings = forceAtlas2.inferSettings(layoutGraph);
+        settings.scalingRatio = 12;
+        settings.gravity = 1.1;
+        settings.barnesHutOptimize = true;
+        forceAtlas2.assign(layoutGraph, { iterations: 400, settings });
+
+        // copy positions back and measure the connected cluster's centre + radius
+        let cx = 0, cy = 0;
+        layoutGraph.forEachNode((id, a) => {
+          graph.setNodeAttribute(id, "x", a.x);
+          graph.setNodeAttribute(id, "y", a.y);
+          cx += a.x; cy += a.y;
+        });
+        cx /= (layoutGraph.order || 1); cy /= (layoutGraph.order || 1);
+        let maxR = 0;
+        layoutGraph.forEachNode((id, a) => { maxR = Math.max(maxR, Math.hypot(a.x - cx, a.y - cy)); });
+        if (!isFinite(maxR) || maxR <= 0) maxR = 10;
+
+        // arrange the unconnected people in concentric rings (alphabetical)
+        const isolated = graph
+          .filterNodes((id, a) => !a.connected)
+          .sort((a, b) => (graph.getNodeAttribute(a, "label") || a).localeCompare(graph.getNodeAttribute(b, "label") || b));
+        const spacing = maxR * 0.16;
+        let ringR = maxR * 1.4 + spacing;
+        let idx = 0;
+        while (idx < isolated.length) {
+          const cap = Math.max(12, Math.floor((2 * Math.PI * ringR) / spacing));
+          for (let j = 0; j < cap && idx < isolated.length; j++, idx++) {
+            const ang = (2 * Math.PI * j) / cap + ringR; // offset each ring so dots don't line up radially
+            graph.setNodeAttribute(isolated[idx], "x", cx + ringR * Math.cos(ang));
+            graph.setNodeAttribute(isolated[idx], "y", cy + ringR * Math.sin(ang));
+          }
+          ringR += spacing;
+        }
+
+        statusEl.className = "overlay hidden";
+
+        /* ---------- render ---------- */
+        const renderer = new Sigma(graph, document.getElementById("sigma-container"), {
+          renderEdgeLabels: false,
+          defaultEdgeColor: cssVar("--fam-other"),
+          labelFont: "system-ui, -apple-system, 'Segoe UI', sans-serif",
+          labelColor: { color: cssVar("--ink") },
+          labelSize: 12,
+          labelWeight: "600",
+          labelDensity: 0.7,
+          labelGridCellSize: 70,
+          zIndex: true,
+        });
+
+        /* ---------- interaction state ---------- */
+        let focusNode = null;          // node currently hovered or selected
+        let selected = null;           // node whose info panel is open
+        let neighborSet = new Set();   // focusNode + its neighbors
+        const activeFamilies = new Set(["kin", "labor", "comm", "other"]);
+        let relTypeFilter = "__all";
+        let showUnconnected = true;
+        const refresh = () => renderer.refresh();
+
+        function neighborhood(node) {
+          const s = new Set();
+          if (node && graph.hasNode(node)) { s.add(node); graph.forEachNeighbor(node, (n) => s.add(n)); }
+          return s;
+        }
+        const edgePassesFilter = (e) => {
+          if (!activeFamilies.has(graph.getEdgeAttribute(e, "family"))) return false;
+          if (relTypeFilter === "__all") return true;
+          return graph.getEdgeAttribute(e, "relations").some((r) => r.label === relTypeFilter);
+        };
+        const nodeHasVisibleEdge = (node) => {
+          let ok = false;
+          graph.forEachEdge(node, (e) => { if (edgePassesFilter(e)) ok = true; });
+          return ok;
+        };
+
+        renderer.setSetting("nodeReducer", (node, data) => {
+          const res = { ...data, color: data.baseColor };
+          // hide the unconnected halo when the viewer toggles it off
+          if (!data.connected && !showUnconnected && node !== selected) { res.hidden = true; return res; }
+          // when a relationship-type filter is active, hide people with no matching edge
+          if (relTypeFilter !== "__all" && node !== selected && !nodeHasVisibleEdge(node)) {
+            res.hidden = true; return res;
+          }
+          if (focusNode && !neighborSet.has(node)) {
+            res.color = cssVar("--node-dim");
+            res.label = "";
+            res.zIndex = 0;
+          } else {
+            res.zIndex = focusNode ? 2 : 1;
+          }
+          // keep the halo tidy: unconnected dots reveal their name only on focus
+          if (!data.connected && node !== focusNode && node !== selected) res.label = "";
+          if (node === selected) res.highlighted = true;
+          return res;
+        });
+
+        renderer.setSetting("edgeReducer", (edge, data) => {
+          const res = { ...data, color: data.baseColor, size: 1.4 };
+          if (!edgePassesFilter(edge)) { res.hidden = true; return res; }
+          const [s, t] = graph.extremities(edge);
+          if (focusNode && !(neighborSet.has(s) && neighborSet.has(t))) {
+            res.color = cssVar("--edge-dim");
+            res.zIndex = 0;
+          } else if (focusNode) {
+            res.size = 2.2; res.zIndex = 2;
+          }
+          return res;
+        });
+
+        renderer.on("enterNode", ({ node }) => {
+          focusNode = node; neighborSet = neighborhood(node);
+          document.body.style.cursor = "pointer"; refresh();
+        });
+        renderer.on("leaveNode", () => {
+          focusNode = selected; neighborSet = neighborhood(selected);
+          document.body.style.cursor = "default"; refresh();
+        });
+        renderer.on("clickNode", ({ node }) => selectNode(node));
+        renderer.on("clickStage", () => { selected = null; focusNode = null; neighborSet = new Set(); closePanel(); refresh(); });
+
+        /* ---------- info panel ---------- */
+        const panel = document.getElementById("info-panel");
+        const content = document.getElementById("info-content");
+        document.getElementById("info-close").onclick = () => { selected = null; focusNode = null; neighborSet = new Set(); closePanel(); refresh(); };
+        const closePanel = () => panel.classList.remove("open");
+
+        const esc = (s) => (s || "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+        function selectNode(node) {
+          selected = node;
+          focusNode = node;
+          neighborSet = neighborhood(node);
+          const p = graph.getNodeAttributes(node);
+          const rels = (relationsByNode.get(node) || []).slice().sort((a, b) => a.label.localeCompare(b.label));
+
+          let html = `<h2>${esc(p.name)}</h2>`;
+          if (p.other) html += `<p class="altnames">also known as ${esc(p.other.replace(/\s*\n\s*/g, ", "))}</p>`;
+          const field = (k, v) => v ? `<div class="field"><div class="k">${k}</div><div class="v">${esc(v)}</div></div>` : "";
+          html += field("Ethnicity / Nationality", p.ethnicity);
+          html += field("Physical descriptors", p.descriptors);
+          html += field("Location(s)", p.locations);
+
+          html += `<div class="field"><div class="k">Relationships (${rels.length})</div><ul id="rel-list"></ul></div>`;
+          if (p.bio) html += `<div class="field"><div class="k">Biography</div><div class="bio">${esc(p.bio)}</div></div>`;
+          content.innerHTML = html;
+
+          const ul = content.querySelector("#rel-list");
+          for (const r of rels) {
+            const other = people.get(r.otherId);
+            const fam = famOf(r.label);
+            const phrase = phrasing(r.label, r.dir);
+            const li = document.createElement("li");
+            li.innerHTML = `<span class="reltype" style="background:${cssVar(FAMILIES[fam].varname)}">${esc(phrase)}</span>` +
+              `<span class="relname" data-id="${esc(r.otherId)}">${esc(other ? other.name : r.otherId)}</span>`;
+            li.querySelector(".relname").onclick = () => { selectNode(r.otherId); renderer.getCamera().animatedReset({ duration: 200 }); };
+            ul.appendChild(li);
+          }
+          if (!rels.length) {
+            ul.innerHTML = `<li style="color:var(--muted);border:none">No relationships recorded yet.</li>`;
+          }
+
+          panel.classList.add("open");
+          // ease the camera toward the node
+          const disp = renderer.getNodeDisplayData(node);
+          if (disp) renderer.getCamera().animate({ x: disp.x, y: disp.y, ratio: Math.min(renderer.getCamera().ratio, 0.55) }, { duration: 350 });
+          refresh();
+        }
+
+        // "MOTHER OF" + outgoing -> "mother of"; incoming -> flip where it reads naturally
+        const INVERSE = {
+          "MOTHER OF": "child of", "FATHER OF": "child of",
+          "DAUGHTER OF": "parent of", "SON OF": "parent of",
+          "AUNT OF": "niece/nephew of", "NEPHEW OF": "aunt/uncle of",
+          "MIDWIFE TO": "attended by (midwife)", "NURSE OF/FOR": "nursed by",
+          "WETNURSE OF": "wetnursed by", "CAREGIVER OF/FOR": "cared for by",
+          "SEASONER TO": "seasoned by", "SEASONEE OF": "seasoner to",
+          "ANANSI STORYTELLER TO": "told stories by",
+        };
+        function phrasing(label, dir) {
+          const L = norm(label).toUpperCase();
+          if (dir === "in" && INVERSE[L]) return INVERSE[L].toLowerCase();
+          return norm(label).toLowerCase();
+        }
+
+        /* ---------- search ---------- */
+        const dl = document.getElementById("people-list");
+        const byName = [];
+        graph.forEachNode((id, a) => byName.push({ id, name: a.name }));
+        byName.sort((a, b) => a.name.localeCompare(b.name));
+        for (const p of byName) {
+          const o = document.createElement("option");
+          o.value = p.name; o.dataset.id = p.id; dl.appendChild(o);
+        }
+        const search = document.getElementById("search");
+        search.addEventListener("change", () => {
+          const match = byName.find((p) => p.name.toLowerCase() === search.value.trim().toLowerCase());
+          if (match) selectNode(match.id);
+        });
+
+        /* ---------- relationship-type filter ---------- */
+        const relSelect = document.getElementById("relfilter");
+        const allLabels = new Set();
+        graph.forEachEdge((e) => graph.getEdgeAttribute(e, "relations").forEach((r) => allLabels.add(r.label)));
+        [...allLabels].sort().forEach((lbl) => {
+          const o = document.createElement("option");
+          o.value = lbl; o.textContent = lbl.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase());
+          relSelect.appendChild(o);
+        });
+        relSelect.addEventListener("change", () => { relTypeFilter = relSelect.value; refresh(); });
+
+        /* ---------- legend / family toggles ---------- */
+        const legend = document.getElementById("legend");
+        for (const key of ["kin", "labor", "comm", "other"]) {
+          if (!famCounts[key]) continue;
+          const item = document.createElement("div");
+          item.className = "legend-item";
+          item.innerHTML = `<span class="swatch" style="background:${cssVar(FAMILIES[key].varname)}"></span>` +
+            `<span>${FAMILIES[key].label}</span><span class="count">${famCounts[key]}</span>`;
+          item.onclick = () => {
+            if (activeFamilies.has(key)) { activeFamilies.delete(key); item.classList.add("off"); }
+            else { activeFamilies.add(key); item.classList.remove("off"); }
+            refresh();
+          };
+          legend.appendChild(item);
+        }
+
+        // toggle for the unconnected-people halo
+        if (unconnectedCount) {
+          const div = document.createElement("div"); div.className = "divider"; legend.appendChild(div);
+          const item = document.createElement("div");
+          item.className = "legend-item";
+          item.innerHTML = `<span class="swatch" style="background:${cssVar("--node-faint")};border-radius:50%"></span>` +
+            `<span>Unconnected people</span><span class="count">${unconnectedCount}</span>`;
+          item.onclick = () => {
+            showUnconnected = !showUnconnected;
+            item.classList.toggle("off", !showUnconnected);
+            refresh();
+          };
+          legend.appendChild(item);
+        }
+
+        document.getElementById("counts").textContent =
+          `${graph.order} people · ${connectedIds.length} linked · ${graph.size} connections`;
+
+        // keep colors correct if the OS theme flips while open
+        window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+          graph.forEachNode((id, a) => graph.setNodeAttribute(id, "baseColor", cssVar(a.connected ? "--node" : "--node-faint")));
+          graph.forEachEdge((e) => graph.setEdgeAttribute(e, "baseColor", cssVar(FAMILIES[graph.getEdgeAttribute(e, "family")].varname)));
+          renderer.setSetting("labelColor", { color: cssVar("--ink") });
+          refresh();
+        });
+      }
+
+      main().catch((e) => showError(`Something went wrong: ${e.message}`));
+    </script>
+  </body>
+</html>

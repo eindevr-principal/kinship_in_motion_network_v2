@@ -1,0 +1,4 @@
+# Nothing needs to be built anymore, so there's very little to ignore.
+.DS_Store
+node_modules/
+_site/
