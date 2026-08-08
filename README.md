@@ -4,7 +4,7 @@ An interactive network of enslaved people and their relationships, drawn from
 the Thistlewood diaries. The site reads two spreadsheets and draws the graph
 automatically — there is **no build step and no code to run**.
 
-Live site: https://eindevr-principal.github.io/kinship_in_motion_network/
+Live site: https://eindevr-principal.github.io/kinship_in_motion_network_v2/
 
 ---
 
