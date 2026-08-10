@@ -1,0 +1,492 @@
+PERSON ID,RELATION 'A' NAME,ALT. NAMES,RELATIONSHIP,NAME,RELATION IDS,RELATION 'B' NAME,BIOGRAPHICAL INFORMATION
+P1,MOLIA,COOBAH,MOTHER OF,SILVIA,P2,SILVIA,"Molia first appeared in the diary in December of 1761. Thistlewood purchased her in a group sale of five other Africans from a trader for 50 pounds. Upon her arrival to Egypt estate, he paired her with an enslaved fieldwoman named Wonga (also known as Princess) to be 'seasoned'. One week after her purchase, he put her to work in Egypt's fields.
+
+ Four years following her purchase, Molia gave birth to a mixed race baby girl named Silvia. When Silvia was fifteen months old, Thistlewood hired Molia to labor on Masemure, a neighboring sugar plantation. He forced her to leave Silvia behind and in the care of Nanny, another enslaved mother of a little girl named Little Phibbah who was the same age as Silvia. Shortly after their separation, Silvia fell sick and died. 
+
+Molia was never the same following Silvia's death. She never had any more children, and and she also refused to stay in place. Over the course of the next six years, she would run away no less than fourteen times. The seventh of these escapes was to a place called Bluefields Bay, to see a person Molia herself identified as a ""Shipmate,"" a person who had survived the Middle Passage voyage with her to Jamaica. The fourteenth of these escapes (and the last that she would make in Jamaica) was to an estate called Paradise; it was the same estate where Molia had been sent to give birth to Silvia. 
+
+Following this fourteenth recapture, Thistlewood sold Molia to another slave owner, who transported her away from Jamaica, and to the British colony of Savannah. Georgia."
+P1,MOLIA,COOBAH,HOUSEMATE OF,PEGGY,P19,PEGGY,
+P1,MOLIA,COOBAH,SHIPMATE OF,SHIPMATE,P23,SHIPMATE,
+P1,MOLIA,COOBAH,IGBO ,OGO,P13,OGO,
+P1,MOLIA,COOBAH,CAREGIVER OF/FOR,ABBA,P6,ABBA,
+P1,MOLIA,COOBAH,GARDENER,,,#N/A,
+P1,MOLIA,COOBAH,SEASONEE OF,,P27,WANGA,
+,,,,,,,
+P2,SILVIA,,DAUGHTER OF,MOLIA,P1,MOLIA,"Silvia was born on November 12, 1766. Her mother was Molia, an ""Ebo"" woman presumed to have been 15 at the time of her capture into the slave trade, and 20 at the time of her birth. Silvia's father was never identified, although he was presumed by Thistlewood to have been a white man. For the first fifteen months of her life Silvia lived with her mother, and another enslaved young African woman named Peggy. 
+
+In the winter of 1768, Thistlewood contracted Molia out to labor on a neighboring sugar estate named Masemure. He forced Molia to leave Silvia behind and in the care of another enslaved woman named Nanny, who also had a 1 year old daughter named Little Phibbah. Several months after her mother's departure, Silvia became sick, and died."
+,,,,,,,
+P3,EGYPT LUCY,,MOTHER OF,JULINA ,P4,JULINA,"Egypt Lucy was an Afro-Creole woman who labored on Egypt Estate's First gang for much of her life.
+
+She had two primary domestic partners: Daniel, a skilled enslaved laborer who lived on Egypt, and Mason Quashe a skilled enslaved laborer who belonged to Elizabeth Anderson--the quadroon mistress of William Dorrill, Thistlewood's first employer-- and who was a regular visitor at Egypt to perform various tasks of carpentry, masonry, and even supervision of the First Gang. 
+
+Between 1750 and her death in 1772, Egypt Lucy had three confirmed pregnancies: one in October 1754 to her daughter Julina with Daniel, the second in August of 1758 to an unnamed son (presumably also with Daniel) who died at just 5 days old, and the third in November of 1759 to a son who was named Little Quashe (presumably after his father, Mason Quashe).
+
+In May 1760, Egypt became the wet nurse to John, the son of Egypt's housekeeper and Thistlewood. This seemed to mark the beginining of a strong and lasting friendship between not only Egypt Lucy and Phibbah, but between Egypt Lucy and Phibbah's broader social network of enslaved domestic workers. This circle included Phibbah's sister, Nancy,her daughter Accubah, an enslaved healer woman named Vine, and another enslaved domestic worker called House Franke. Together, the six women formed an agricutural co-op of sorts, pooling the money and resources they earned through the selling of goods they raised from their provison grounds, their raising of livestock, and from sewing work they were contracted to perform for whites. They intended the funds to be used to purchase at least one of each other's freedom.
+
+Egypt Lucy was relatively prosperous as a enslaved business woman; such that in 1769, she along with Phibbah, and House Franke gave Thistlewood a 27 pound loan to help him in his transition from Egypt's overseer to an independeny penkeeper of a property called Breadnut Island Pen. EGypt Lucy would als give Thistlewood a second personal loan of 10 pounds; he would go on to repay both loans within about a year. 
+
+Following her stint as John's wetnurse, Egypt Lucy continued to act as a care provider and parental influence for both Phibbah's children. When Phibbah and Thistlewood moved away from Egypt and left John behind, they entrusted EGypt Lucy to escort him to their newhome on Breadnut Islabd Pen for visits. Egypt Lucy also kept abreast of the day-to-day and night-to-night activities of Phibbah's daughter Accubah--including her covert fasincination and involvement in the secret Myal society.
+
+On multiple occasions throughout the years, Egypt Lucy was chosen by her white masters to be a 'seasoner,' a role designed for mostly Afro-Creole enslaved men and women who had either been born or resided in Jamaica for extended periods of time to acclimate/'season' newly arrived Africans to their new realities. In December of 1761, after purchasing 6 new Africans from a slave trader named John Hutt, Thistlewood tasked Egpyt Lucy with being the seasoner of a young African girl included in this sale named Ogo (he would rename her Maria). In November of 1766, Ogo would give birth to her first child: a daughter named Lucy.
+
+In July 1770, shortly following Molia's fourth escape from and return to Breadnut Island Pen, Egypt Lucy paid a visit to the pen, where she interrupted Thistlewood's attempt to punish Molia by confining her to a set of bilboes, convincing him not to.
+
+As a field laborer, Egypt Lucy was frequently in poor health. In June of 1772, she died. Phibbah and a 12 year old John attended her funeral and burial."
+P3,EGYPT LUCY,,MOTHER OF,LITTLE QUASHE,P5,LITTLE QUASHE,
+P3,EGYPT LUCY,,FRIEND OF,PHIBBAH,P7,PHIBBAH,
+P3,EGYPT LUCY,,FRIEND OF,NANCY,P8,NANCY,
+P3,EGYPT LUCY,,FRIEND OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P3,EGYPT LUCY,,FRIEND OF,VINE,P12,VINE,
+P3,EGYPT LUCY,,BUSINESS PARTNER OF,PHIBBAH,P7,PHIBBAH,
+P3,EGYPT LUCY,,BUSINESS PARTNER OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P3,EGYPT LUCY,,BUSINESS PARTNER OF,NANCY,P8,NANCY,
+P3,EGYPT LUCY,,BUSINESS PARTNER OF,COOBAH,P16,COOBAH,
+P3,EGYPT LUCY,,WETNURSE OF,JOHN,P9,JOHN,
+P3,EGYPT LUCY,,CAREGIVER OF/FOR,JOHN,P9,JOHN,
+P3,EGYPT LUCY,,GARDENER,,,,
+P3,EGYPT LUCY,,SEASONER TO,OGO,P13,OGO,
+P3,EGYPT LUCY,,DOMESTIC PARTNER OF,MASON QUASHE,P25,MASON QUASHE,
+P3,EGYPT LUCY,,DOMESTIC PARTNER OF,DANIEL,P42,DANIEL,
+P3,EGYPT LUCY,,MOTHER OF,,P441,EGYPT LUCY'S CHILD #3,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P105,DIDO,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P134,BETTY,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P27,WANGA,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P33,ELLIN,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P3,EGYPT LUCY,,FIELD GANG [FIRST],,P106,SARAH,
+,,,,,,,
+P4,JULINA,,DAUGHTER OF,EGYPT LUCY,P3,EGYPT LUCY,"Julina was born in October of 1754 on Egypt Estate. Her mother was Egypt Lucy, an enslaved and Afro-Creole member Egypt estate's first gang. Her father was Daniel, an enslaved skilled laborer who also lived on Egypt. 
+
+In August of 1758, Julina's mother Egypt Lucy gave birth to an unnamed baby boy, Julina's brother, who died at 5 days old. The following year, in November of 1759, Egypt Lucy was sent away from Egypt to a neighboring estate called Paradise, where she gave birth to another son, Julina's second brother, who was named Little Quashe. Julina fell sick while her mother was away, but soon recovered. Little Quashe and Egypt Lucy returned to Egypt in January of 1760, where they would continue as one nuclear household.
+
+In October of 1766, Julina would, for reasons unspecified by Thistlewood, accompany Molia to Paradise for her lying in period before she gave birth to Silvia in November of that same year.
+
+In December of 1770, Julina became the mistress/concubine of a white man named Robert Parker, a friend of Thistlewood's. "
+P4,JULINA,,SISTER OF,LITTLE QUASHE,P5,LITTLE QUASHE,
+P4,JULINA,,CAREGIVER OF/FOR,MOLIA,P1,MOLIA,
+P4,JULINA,,DOMESTIC PARTNER OF,,P69,MR. PARKER,
+,,,,,,,
+P5,LITTLE QUASHE,,SON OF,EGYPT LUCY,P3,EGYPT LUCY,"Little Quashe was born in November of 1759, the son of Egypt Lucy, a field laborer of Egypt Estate and Mason Quashe, a skilled enslaved laborer who belonged to Elizabeth Anderson--the quadroon mistress of William Dorrill, Thistlewood's first employer-- and who was a regular visitor at Egypt to perform various tasks of carpentry, masonry, and even supervision of the First Gang. He was half-brother to Julina, Egypt Lucy's first daughter. 
+
+Like many children of his time and place, Little Quashe was frequently ill. He was cared for by his mother, as well as by his mother's close friends, Phibbah (the housekeeper of Egypt Estate), and Vine, an enslaved woman, healer and storyteller from a neighboring estate."
+P5,LITTLE QUASHE,,SON OF,,P25,MASON QUASHE,
+P5,LITTLE QUASHE,,BROTHER OF,JULINA,P4,JULINA,
+,,,,,,,
+P6,ABBA,,MOTHER OF,JOHNIE,P20,ABBA'S JOHNIE,"Abba was an enslaved African young woman, first appearing in the diary in Februaryof 1758 when she was purchased by Thistlewood from a slave trader named John Parkinson for 46 pounds. Thistlewood intended for her to be a domestic worker, setting her to train in the cookroom with Egypt's housekeeper Phibbah, then hiring her out to other white neighbors throughout the parish.
+
+Abba would have several domestic/sexual partners over the course of the twenty eight years she appears in the diaries. The first of these was Hazat, a driver who belonged to William Mould, an owner of a neighboring plantation. Another was Cudjoe, an enslaved fieldhand who belonged to John Rickett, one of Thistlewood's friends. A third was Neptune, an enslaved man who belonged to a Savanna la Mar tavern owner and another of Thistlewood's friends, Thomas Emotson. A fourth was Lincoln, the very first enslaved person Thistlewood ever purcahsed.
+
+Abba was unique among the many enslaved women who appear in the diairies in the sense that was extremely fertile, having a total of thirteen pregnancies over the span of twenty eight years. Ten of these resulted in live births, one in a stillbirth. Of these ten children, six (Including Johnie, Neptune, Jenny, Mary)survived their first year of life  and four survived until at least 1786, the year of Thistlewood's death and the last year of the diary records.
+
+Abba and her children's living arrangements fluctuated usually depending upon who her current sexual/domestic partner was, but for a period of time in 1767, she and Mary, Johnie and Neptune lived with Sally, a Congo woman who Thistlewood had first purchased as a 8 or 9 year old child in 1762.
+
+Abba was known to tell the Anansi spider stories that she had learned from her homeland alongside Vine, an enslaved domestic woman and healer from a neighboring plantation."
+P6,ABBA,,MOTHER OF,MARY,P21,ABBA'S MARY,
+P6,ABBA,,MOTHER OF,,P442,JENNY [ABBA'S DAUGHTER],
+P6,ABBA,,MOTHER OF,,P443,NEPTUNE [ABBA'S SON],
+P6,ABBA,,HOUSEMATE OF,SALLY,P17,SALLY,
+P6,ABBA,,DOMESTIC PARTNER OF,,P87,HAZAT,
+P6,ABBA,,DOMESTIC PARTNER OF,,P24,LINCOLN,
+P6,ABBA,,DOMESTIC PARTNER OF,,P444,CUDJOE [JOHN RICKETT'S],
+P6,ABBA,,DOMESTIC PARTNER OF,,P445,NEPTUNE [THOMAS EMOTSON'S],
+P6,ABBA,,AFRICAN,,,#N/A,
+P6,ABBA,,ANANSI STORYTELLER TO,,P12,VINE,
+,,,,,,#N/A,
+P7,PHIBBAH,PHIB; PHIBBA,MOTHER OF,JOHN,P9,JOHN,"Phibbah was the Afro-Creole housekeeper of Egypt Estate. She was owned by Molly Cope, the wife of John Cope, Thistlewood's employer. A prominent and influential figure among the broader enslaved communit, Phibbah often leveraged that influence to gain relative material and social benefits for herself, her children and her other loved ones.
+
+Phibbah was very close with a sister named Nancy who lived on a neighboring plantation and very frequently visited her.
+
+Phibbah had an unnamed enslaved husband, but this relationship was soon displaced by the sexual/domestic relationship she would strike up with Thistlewood that would last for over three decades, ending only in his death in 1786. Although he was never monogamous, Thistlewood referred to Phibbah as his ""wife"".
+
+The diaries depict Phibbah as having three confirmed pregnancies/children. The first was a daughter named Accubah [unknown date of birth and father; also called Coobah and later Jenny Young], a stillborn boy [with John Cope, born ] and John [her son with Thistlewood who lived to the age of 20].
+
+Phibbah had a tight knit circle of friends, most of whom were enslaved women domestic laborers. These included her sister Nancy, her daughter Accubah, domestic laborer and healer Vine, and domestic laborer House Franke. Following the birth of her son John in 1760, she also became very close friends with an enslaved field woman of Egypt estate called Egypt Lucy who served as John's wetnurse. Phibbah often visited with Egypt Lucy, cared for her son Little Quashe when he was will. She also brought Egypt Lucy into the agricultural co-op network that she had formed with her sister, daughter and other friends. Together, the six women pooled the money and resources they earned through the selling of goods they raised from their provison grounds, their raising of livestock, and from sewing work they were contracted to perform for whites. They intended the funds to be used to purchase at least one of each other's freedom.
+
+Phibbah was a very prosperous businesswoman and in 1769, she along with Egypt Lucy, and House Franke gave Thistlewood a 27 pound loan to help him in his transition from Egypt's overseer to an independent penkeeper of a property called Breadnut Island Pen-- a loan that he would return about a year or so later. It was one of several loans she would give to them him throughout their relationship.
+
+Phibbah outlived Thistlewood, and was granted her freedom following his death in 1786."
+P7,PHIBBAH,PHIB; PHIBBA,MOTHER OF,COOBAH,P16,COOBAH,
+P7,PHIBBAH,PHIB; PHIBBA,SISTER OF,NANCY,P8,NANCY,
+P7,PHIBBAH,PHIB; PHIBBA,AUNT OF,,P446,DAVIE [NANCY'S SON],
+P7,PHIBBAH,PHIB; PHIBBA,AUNT OF,,P447,NANCY'S DAUGHTER,
+P7,PHIBBAH,PHIB; PHIBBA,DOMESTIC PARTNER OF,,P436,PHIBBAH'S HUSBAND,
+P7,PHIBBAH,PHIB; PHIBBA,FRIEND OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P7,PHIBBAH,PHIB; PHIBBA,FRIEND OF,VINE,P12,VINE,
+P7,PHIBBAH,PHIB; PHIBBA,FRIEND OF,NANCY,P8,NANCY,
+P7,PHIBBAH,PHIB; PHIBBA,BUSINESS PARTNER OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P7,PHIBBAH,PHIB; PHIBBA,BUSINESS PARTNER OF,NANCY,P8,NANCY,
+P7,PHIBBAH,PHIB; PHIBBA,BUSINESS PARTNER OF,COOBAH,P16,COOBAH,
+P7,PHIBBAH,PHIB; PHIBBA,NURSE OF/FOR,LITTLE QUASHE,P5,LITTLE QUASHE,
+P7,PHIBBAH,PHIB; PHIBBA,NURSE OF/FOR,EGYPT LUCY,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P8,NANCY,,SISTER OF,PHIBBAH,P7,PHIBBAH,"Nancy was an Afro-Creole domestic laborer who lived on/moved between Egypt estate, as well as Paradise estate (another plantation owned by John Cope. She was the sister of Phibbah, Egypt's housekeeper, and aunt to Phibbah's two children, Accubah [also known as Coobah and later Jenny Young] and John.
+
+The diaries confirm Nancy as having two pregnancies; one in  to a boy named Davie who fell sick snd died in 1756, and another in 1757 to a girl who was born dead.
+
+Like Phibbah, Nancy held relative measures of material and social privilege. She held multiple 'balls' that her sister and other domestic enslaved labrers and whites attended. She was able to 'rent' out the labor of an enslaved Egypt fieldwoman named Rose to assist her in caring for Davie when he was ill. In the aftermath of Davie's death, Nancy held a ""play"" (funeral) for Davie that lasted for two days/nights.
+
+Nancy was close friends with her sister Phibbah, as well as a broader circle of friends that included ncluded her sister Phibbah, her niece Accubah, domestic laborer and healer Vine, domestic laborer House Franke, and fieldwoman Egypt Lucy. Together, the six women pooled the money and resources they earned through the selling of goods they raised from their provison grounds, their raising of livestock, and from sewing work they were contracted to perform for whites. They intended the funds to be used to purchase at least one of each other's freedom (notably, Nancy's).
+"
+P8,NANCY,,BUSINESS PARTNER OF,PHIBBAH,P7,PHIBBAH,
+P8,NANCY,,BUSINESS PARTNER OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P8,NANCY,,BUSINESS PARTNER OF,COOBAH,P16,COOBAH,
+P8,NANCY,,BUSINESS PARTNER OF,EGYPT LUCY,P3,EGYPT LUCY,
+P8,NANCY,,FRIEND OF,PHIBBAH,P7,PHIBBAH,
+P8,NANCY,,FRIEND OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P8,NANCY,,FRIEND OF,VINE,P12,VINE,
+P8,NANCY,,FRIEND OF,EGYPT LUCY,P3,EGYPT LUCY,
+P8,NANCY,,AUNT OF,COOBAH,P16,COOBAH,
+P8,NANCY,,AUNT OF,JOHN,P9,JOHN,
+P8,NANCY,,MOTHER OF,,P446,DAVIE [NANCY'S SON],
+P8,NANCY,,MOTHER OF,,P447,NANCY'S DAUGHTER,
+,,,,,,#N/A,
+P9,JOHN,MULATTO JOHN,SON OF,PHIBBAH,P7,PHIBBAH,"John was the mixed race son of Phibbah, the housekeeper of Egypt Estate, and Thomas Thistlewood, Egypt's overseer and the later owner of Breadnut Island Pen. Although he assumed paternal and financial support for him, Thistlewood never directly acknowledged paternity of John in the diaries, either referring to him as ""Phibbah's child"" or ""Mulatto John"".
+
+John was born in April of 1760 in a difficult birth, assisted by a midwife from Salt River estate called Old Daphne and House Franke, his mother's close friend and business partner. In the days following his birth, John was nursed by an Egypt fieldwoman named Egypt Lucy, who would go on to become one of his mother's closest friends, business partners, and a caregiver for John when his parents moved away from him.
+
+Phibbah secured a promise from Thistlewood in October of 1761 that John would be granted his freedom and in May of 1762, he fulfilled that promise. During the majority of his childhood, the freed John was sent to live in a boarding school for mixed race children where he learned how to read and write, was eventually apprenticed to become a carpenter at the age of 15, and allowed to join in Jamaica's 'colored' militia. One of his childhood friends was James, the son of a mixed race domestic laborer named Little Mimber on a neighboring plantation.
+
+John was not diligent in his apprenticeship, often absenting from work for days on end. He was frequently in debt, and involved in domestic disputes. John lived to the age of twenty, then died in September of 1780 of a sudden, putrid stomach infection that turned his fingernails black and shredded his intestines. Phibbah was beside herself with grief, later suspecting that he had been poisoned as a result of a love triangle gone horribly wrong. The death struck a heavy blow to the broader enslaved community, many of whom came to his burial. John’s half-sister Accubah came to stay with their mother for several weeks afterwards. "
+P9,JOHN,MULATTO JOHN,BROTHER OF,COOBAH,P16,COOBAH,
+P9,JOHN,MULATTO JOHN,FRIEND OF,,P448,JAMES [LITTLE MIMBER'S SON],
+P9,JOHN,MULATTO JOHN,NEPHEW OF,,P8,NANCY,
+P9,JOHN,MULATTO JOHN,DOMESTIC PARTNER OF,,,,
+,,,,,,#N/A,
+P10,HOUSE FRANKE,,FRIEND OF,PHIBBAH,P7,PHIBBAH,"House Franke was an enslaved domestic laborer who lived on Paradise estate. She was a very close friend of Phibbah [the housekeeper of Egypt estate], Phibbah's sister Nancy, Phibbah's daughter Accubah [also known as Coobah and later, Jenny Young], an enslaved domestic laborer and healer named Vine, and an enslaved Egypt fieldwoman named Egypt Lucy. Together, the six women pooled the money and resources they earned through the selling of goods they raised from their provison grounds, their raising of livestock, and from sewing work they were contracted to perform for whites. They intended the funds to be used to purchase at least one of each other's freedom.
+
+House Franke had a husband named Paradise Jack who (presumably) lived with her at Paradise. 
+
+House Franke was a very frequent visitor to Egypt, and to Breadnut Island Pen to visit with Phibbah. When Phibbah gave birth to John in 1760, House Franke came and stayed at Egypt for several days to assist at her bedside. When Phibbah herself fell ill, House Franke came and stayed with her again to nurse her back to health. Like Egypt Lucy, House Franke also mantained a significant presence in the lives of Phbbah's children (who did not live with her for the majority of the time).
+
+House Franke was a relatively prosperous businessowman and in  1769, she along with Phibbah, and Egypt Lucy gave Thistlewood a 27 pound loan to help him in his transition from Egypt's overseer to an independeny penkeeper of a property called Breadnut Island Pen. He would repay the loan about a year later. House Franke made a second loan to Thistlewood in December of 1770; he repaid it in September of 1771."
+P10,HOUSE FRANKE,,FRIEND OF,EGYPT LUCY,P3,EGYPT LUCY,
+P10,HOUSE FRANKE,,FRIEND OF,NANCY,P8,NANCY,
+P10,HOUSE FRANKE,,FRIEND OF,VINE,P12,VINE,
+P10,HOUSE FRANKE,,BUSINESS PARTNER OF,PHIBBAH,P7,PHIBBAH,
+P10,HOUSE FRANKE,,BUSINESS PARTNER OF,COOBAH,P12,VINE,
+P10,HOUSE FRANKE,,BUSINESS PARTNER OF,NANCY,P8,NANCY,
+P10,HOUSE FRANKE,,BUSINESS PARTNER OF,EGYPT LUCY,P3,EGYPT LUCY,
+P10,HOUSE FRANKE,,NURSE OF/FOR,PHIBBAH,P7,PHIBBAH,
+P10,HOUSE FRANKE,,DOMESTIC PARTNER OF,,P35,PARADISE JACK,
+,,,,,,#N/A,
+P11,OLD DAPHNE,,MIDWIFE TO,PHIBBAH,P7,PHIBBAH,"Old Daphne was an enslaved 'grannie' midwife who resided on Salt River Estate. She was called to preside over at least fivw different childbirths over the course of about a decade, including Phibbah, the housekeeper of Egypt estate and three enslaved fieldwomen named Jenny, Anjaw, Mountain Lucy and Sarah."
+P11,OLD DAPHNE,,MIDWIFE TO,,P104,JENNY,
+P11,OLD DAPHNE,,MIDWIFE TO,,P166,ANJAW,
+P11,OLD DAPHNE,,MIDWIFE TO,,P30,MOUNTAIN LUCY,
+P11,OLD DAPHNE,,MIDWIFE TO,,P106,SARAH,
+,,,,,,#N/A,
+P12,VINE,,NURSE OF/FOR,PHIBBAH,P7,PHIBBAH,"Vine was a full blooded African or an Afro-Creole domestic laborer who lived on a neighboring plantation called Cabaritta Estate owned by one of Thistlewood's friends, Samuel Say. She was the daughter of at least one enslaved African parent, a man named Old Pompey who belonged to another of Thistlewood's friends named Jeremiah Meyer and lived on his estate of Meylersfield. When Vine's mother died in 1764, the enslaved community held a ""play"" (a communal funeral) in her honor.
+
+Vine was involved in various sexual/domestic partnerships over the course of several years, including one with a white man named MacArthur who was employed on the Roaring River estate, and another with a driver named Sam who lived on the property of a Mrs. Sarah Bennett (who would lster sell thistlewood Breadnut Island Pen).
+
+The diary never describes Vine as having any children of her own. However, she was a regular presence in the lives of her friends' children, especially that of her friend Phibbah [the housekeeper of Egypt Estate) and Phibbah's children John and Accubah, and Egypt Lucy's child Little Quashe.
+
+Vine was a very close friend of Phibbah, Phibbah's sister Nancy, an enslaved domestic woman from Paradise Estate named House Franke, and an enslaved field woman from Egypt Estate named Egypt Lucy. Vine, Phibbah and John were relatively privileged as domestic laborers, given leave by their masters to attend various social events througout the parish such as horse races. In a significant departure from most other enslaved people in Jamica who were forced to walk everywhere as their chief means of transportation, Vine owned her own horse named Powder Tail.
+
+Vine was a skilled healer and regularly attended to the sickbeds of enslaved men, women and children when they were ill--especially when they were friends or her friends' children.
+
+Vine was a skilled teller of Anansi spider stories, and frequently came to Egypt in the evenings to tell them to enslaved people and whites alike, sometimes alongside other enslaved Africans like Abba."
+P12,VINE,,FRIEND OF,PHIBBAH,P7,PHIBBAH,
+P12,VINE,,FRIEND OF,EGYPT LUCY,P3,EGYPT LUCY,
+P12,VINE,,FRIEND OF,NANCY,P8,NANCY,
+P12,VINE,,FRIEND OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P12,VINE,,ANANSI STORYTELLER TO,,,#N/A,
+P12,VINE,,DOMESTIC PARTNER OF,,P114,MR. MCARTHUR,
+P12,VINE,,DOMESTIC PARTNER OF,,P181,SAM,
+P12,VINE,,DAUGHTER OF,,P36,OLD POMPEY,
+P12,VINE,,DAUGHTER OF,,P242,VINE'S MOTHER,
+,,,,,,#N/A,
+P13,OGO,MARIA,IGBO ,,,#N/A,"Ogo first appeared in the diary in December of 1761. Thistlewood purchased her in a group sale of five other Africans from a trader for 50 pounds. Upon her arrival to Egypt estate, he paired her with an enslaved fieldwoman named Egypt Lucy. After renaming her ""Maria,"" one week after her purchase, he put Ogo to work in Egypt's fields.
+
+Five years after her 
+
+"
+P13,OGO,MARIA,MOTHER OF,LUCY,P14,LUCY,
+P13,OGO,MARIA,MOTHER OF,,P449,RACHAEL [OGO'S DAUGHTER],
+P13,OGO,MARIA,MOTHER OF,,P450,"OGO'S SON [DEAD, 1770]",
+P13,OGO,MARIA,NURSE OF/FOR,ABASSE,P39,ABASSE,
+P13,OGO,MARIA,HOUSEMATE OF,EGYPT LUCY,P3,EGYPT LUCY,
+P13,OGO,,HOUSEMATE OF,JULINA,P4,JULINA,
+P13,OGO,,HOUSEMATE OF,LITTLE QUASHE,P5,LITTLE QUASHE,
+P13,OGO,MARIA,SEASONEE OF,EGPYT LUCY,P3,EGYPT LUCY,
+P13,OGO,MARIA,CAREGIVER OF/FOR,,,#N/A,
+P13,OGO,MARIA,DOMESTIC PARTNER OF,SOLON,P26,SOLON,
+P13,OGO,MARIA,DOMESTIC PARTNER OF,,P233,OGO'S SWEETHEART,
+P13,OGO,MARIA,DOMESTIC PARTNER OF,,P355,CUBBENNA,
+,,,,,,#N/A,
+P14,LUCY,LITTLE LUCY,DAUGHTER OF,OGO,P13,OGO,"Little Lucy was born in November of 1766 to Ogo, an ""Ebo"" young woman and fieldhand and Solon, an African young man and fieldhand on Paradise Estate, both purcahsed by Thistlewood in 1761. Her mother was assisted in the delivery by an enslaved grannie named Paradise Quasheba.
+
+Little Lucy would have two siblings: a brother born in 1770 who died at just seven days old of tetanus, and a younger sister, Rachael, born in 1771 and and who would die in 1775 at four years old.
+
+Little Lucy was often sick, and subject to frequent injuries over her life, but she often was able to recover. In 1777, she became extremely ill of stomach and neck pains for several days before falling into convulsions and dying at the age of ten--a milestone in a time and place when most enslaved children died before reaching the age of two. Solon dug her grave. On the evening of her burial, a moon/lunar rainbow appeared in the sky. "
+,,,,,,#N/A,
+P15,NANNY,,AFRICAN,,,#N/A,"Nanny was an enslaved African young woman purchased by John Cope on Thistlewood's behalf in July of 1761 in Kingston, alongside two other African men: Solon and Caesar, who were also most likely her shipmates. She was presumed to be 21 years old.
+
+Nanny had just one daughter, born in August of 1766 ""in the height of bad weather"" at a neighboring estate called Paradise. Nanny was assisted in the birth by an enslaved grannie named Paradise Quasheba. Her daughter was named Little Phibbah.
+
+In the Spring of 1768, Nanny was entrusted with caring for Molia's (renaned Coobah) only child Silvia while Molia was hired out to labor on a neighboring plantation. Silvia fell sick while her mother was away and died at 15 months old.
+
+Little Phibbah was often ill througnout her life, and in 1771 she died at age of five after a long and painful bout of stomach worms.
+
+Nanny would be one of the enslaved people on Breadnut Island Pen who would go on to outlive Thistlewood following his death in 1786. In a 1787 appraisal of his human property she was estimated to be ""about 47 years old"" and valued at 60 pounds. "
+P15,NANNY,,MOTHER OF,LITTLE PHIBBAH,P22,LITTLE PHIBBAH,
+P15,NANNY,,CAREGIVER OF/FOR,SILVIA,P2,SILVIA,
+P15,NANNY,,SHIPMATE OF,,P26,SOLON,
+P15,NANNY,,SHIPMATE OF,,P451,CAESAR,
+,,,,,,#N/A,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,DAUGHTER OF,PHIBBAH,P7,PHIBBAH,"Accubah, also known as 'Coobah' was an enslaved Afro-Creole girl born to Phibbah, the housekeeper of Egypt Estate and an unknown father sometime during the 1750s.
+
+Throughout her childhood, she mostly lived apart from her mother on Paradise, a neighboring sugar estate that was also owned by their owners John and Mary (Molly) Copeand served as a domestic servant to Molly Cope. Accubah was later sent to a school for mixed race children at an early age to learn to read and write.
+
+In addition to being frequently separated from her mother, Accubah was frequently the target of sexual predation from white men, including John Cope and a white laborer on Egypt named Sam Matthews who attempted to rape her in Egypt's boiling house in before being thwarted, ironically enough, by Thistlewood himself. She was one of the only enslaved girls/women in the diary who he never forced himself upon sexually.
+
+Accubah had a number of sexual partners over the years who were mostly either free mixed race men of color, or white men. Three of the mixed race men were described as being her 'husband': Mulatto Davie in 1761, Nagua in 1766 (who also appeared to have grown up with Accubah on the estate), and Jimmy Stewart in 1776.
+
+Accubah was an accomplished seamstress, who put her skills to good use in taking on paid sewing jobs for Thistlewood, and also sewing intricate messages into the dresses and bodices of her fellow enslaved women.
+
+At some point during the late 1760's Accubah became involved in the cult society of Myalism; an Afro-Jamaican religion that according to what some scholars have argued was “the first religious organization of Africans in Jamaica” that “addressed itself to the entire slave society."" Myal was organized around the premise that enslaved people could inure themselves to the many dangers and predations from white
+
+Accubah was very close with her mother PhIbbah, and with her mother Phibbah's friends: Accubah's aunt Nancy, an enslaved domestic woman who also lived at Paradise named House Franke, an enslaved domestic woman and healer named Vine from Cabaritta estate and an enslaved field woman from Egypt named Egypt Lucy. Together, the six women pooled the money and resources they earned through the selling of goods they raised from their provison grounds, their raising of livestock, and from sewing work they were contracted to perform for whites. They intended the funds to be used to purchase at least one of each other's freedom.
+
+Accubah was very fond of hearing Anansi spider tales told by her mother's close friend, an enslaved healer from Cabarittta Estate named Vine. She made regular trips to her mother's later residence of Breadnut Island Pen to hear them under the cover of night.
+
+Accubah traveled abroad to England twice in her lifetime; once in 1767 and once in the spring of 1771, as a domestic to the Cope's two daughters. On her second trip, she was baptized into the Church of England and christened 'Jenny Young', a name she would go by for the rest of her life after returning to Jamaica.
+
+Accubah had seversl children over the course of her life, but only one of whom would survive into childhood: Little Nancy (presumably named after her Aunt).
+
+Like her mother, Accubah/Jenny Young would go onto outlive Thistlewood past his death in 1786, although it is unknown whether or not she would ever receive her freedom like her mother did."
+P16,COOBAH,ACCUBAH; JENNY YOUNG,SISTER OF,JOHN,P9,JOHN,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,MOTHER OF,LITTLE NANCY,P56,LITTLE NANCY,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,BUSINESS PARTNER OF,PHIBBAH,P7,PHIBBAH,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,BUSINESS PARTNER OF,HOUSE FRANKE,P10,HOUSE FRANKE,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,BUSINESS PARTNER OF,NANCY,P8,NANCY,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,BUSINESS PARTNER OF,EGYPT LUCY,P3,EGYPT LUCY,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,MYAL PRACTITIONER WITH,JOB,P29,JOB,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,MYAL PRACTITIONER WITH,,P121,DAGO,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,DOMESTIC PARTNER OF,,P119,MULATTO DAVIE,
+P16,COOBAH,ACCUBAH; JENNY YOUNG,DOMESTIC PARTNER OF,,P207,NAGUA,
+P16,COOBAH,ABB,DOMESTIC PARTNER OF,,P452,JIMMY STEWART,
+,,,,,,#N/A,
+P17,SALLY,,CONGO,,,#N/A,"Sally first appears in the diary in April of 1762 in a purchase that Thistlewood made from one his white associates/friends Jeremiah Meyler. He described her as a ""Congo girl"" of no more than ""9 or 10 years old"" and standing at just 4'1 inches tall. He paid 42 pounds cash for her.
+
+Sally was originally intended and trained to be a seamstress/domestic laborer, but for the next twenty two years, she would put up regular and varied shows of resistance to every job, assignment or position that Thistlewood tried to force upon her. Even after he eventually relegated her to his field gang, Sally regularly stole food and other possessions from both white and endlsved Black people throughout the neighborhood. Over the course of her twenty two years in Jamaica, she ran away at least twelve different times.
+
+Sally was the victim of many acts of sexual assault and terrorism from various white men. (including Thistlewood) that mutilated her genitals, which probably attributed to the fact that she never had any children, nor was confirmed as ever being pregnant. Like many field laborers in Jamaica, she was often ill from yaws (which resulted in the amputation of one of her toes), and from venereal diseases. 
+
+In November of 1784, Thistlewood sold Sally to anther trader, who transported her off the island altogether and to an unknown location."
+P17,SALLY,,HOUSEMATE OF,ABBA,P6,ABBA,
+P17,SALLY,,GARDENER,,,#N/A,
+,,,,,,#N/A,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,EGYPT LUCY,P3,EGYPT LUCY,"Paradise Quasheba was an enslaved 'grannie' (midwife) who lived on Paradise Estate. She attended at least eleven different enslaved women's births between 1759-1766: Egypt Lucy, Nancy, Rosanna, Moll, Agnes, Jenny, Wonga, Molia, Ogo, Nanny and Eve--the majority of whose infants survived both a 9 day observing period and several years into their childhoods. "
+P18,PARADISE QUASHEBA,,MIDWIFE TO,LITTLE QUASHE,P5,LITTLE QUASHE,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,MOLIA,P1,MOLIA,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,SILVIA,P2,SILVIA,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,OGO,P13,OGO,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,LUCY,P14,LUCY,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,NANNY,P15,NANNY,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,LITTLE PHIBBAH,P22,LITTLE PHIBBAH,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P8,NANCY,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P128,EVE,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P104,JENNY,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P27,WANGA,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P115,ROSANNA,
+P18,PARADISE QUASHEBA,,MIDWIFE TO,,P125,MOLL,
+,,,,,,#N/A,
+P19,PEGGY,,AFRICAN,,,#N/A,"Peggy was an African young woman who first appeared in the diary in 1765 when Thistlewood attended a 'slave scramble' aboard a Guinea ship and purchased her alongside 9 other enslaved Africans (5 young men and 4 other young women in total). These 9 Africans were Peggy's shipmates: Syphox, Cudjoe, Chub, Bristol, Jmmy, Myrtilla, Phoebe, Franke and Damsel). Thistlewood presumed her to be ""about 16 or 17 years old.""
+
+Peggy was assigned to field labor for the next twenty one years. She was often ill of yaws. Thistlewood also speculated that at times, she showed signs of being ""disordered in her senses,"" although he doesn't specify why/how.
+
+If Peggy ever had a husband/domestic partner, Thistlewood never knew or recorded it.  She never bore any children, nor was she ever described as ever being pregnant. For several years, she shared a household with her fellow field gang member Molia [Coobah] and Molia's daughter, Silvia. Follwing Silvia's death, Peggy continued to share a household with Molia until 1774 when Thistlewood, frustrated with her repeated escaps attempts, sold her to a trader who trafficked her to Georgia.
+
+Peggy was caught engaging in geophagia (eating dirt) in 1774 and was flogged for it (notably for the first time). An accident involving a driver and a whip caused her right eye to be severely mutilated in June of 1780. She was one of the enslaved community who outlived Thistlewood following his death in 1786. In a 1787 appraisal, she was estimated to be about 39 years old, described as ""distempered,"" ""blind in one eye"" and valued at 10 pounds. "
+P19,PEGGY,,SHIPMATE OF,CHUB,P57,CHUB,
+P19,PEGGY,,SHIPMATE OF,PHOEBE,P58,PHOEBE,
+P19,PEGGY,,SHIPMATE OF,FRANKE,P59,FRANKE,
+P19,PEGGY,,SHIPMATE OF,CUDJOE,P60,CUDJOE,
+P19,PEGGY,,SHIPMATE OF,MIRTILLA,P32,MIRTILLA,
+P19,PEGGY,,SHIPMATE OF,JIMMY,P54,JIMMY,
+P19,PEGGY,,SHIPMATE OF,DAMSEL,P34,DAMSEL,
+P19,PEGGY,,HOUSEMATE OF,MOLIA,P1,MOLIA,
+P19,PEGGY,,HOUSEMATE OF,SILVIA,P2,SILVIA,
+P19,PEGGY,,GARDENER,,,#N/A,
+,,,,,,#N/A,
+P20,JOHNIE,,SON OF,ABBA,P6,ABBA,"Johnie was born in 1764 to Abba, an enslaved African domestic laborer that Thistlewood first purchased in 1758. His father may have been Neptune, an enslaved man belonging to a white man named Emotson, one of Thistlewood's friends who also owned a tavern in Savanna la Mar and was described as Abba's ""husband"" around the time of his birth. He had three surviving siblings who: an elder sister named Mary, a younger brother named Neptune and a younger sister named Jenny. 
+
+Johnie lived to the age of seven (a milestone for a child in Jamaica at that time). In January of 1771, he became deathly ill, suffering from stmach cramps and falling into ""faints""/""fits"" (seizures). Vine, an enslaved domestic laborer and healer from the neighboring Cabaritta estate came to ""bleed"" and tend to Johnie. Three days later Thistlewood himself sent Abba with Johnie to the parish Bay to be seen and treated by a white physician, but Johnie died on the trip back home. Abba was inconsolable with grief. Johnie was buried that same evening near his mother's house. Numerous enslaved people from surrounding estates and pens, including Vine, attended his funeral, singing over him.
+
+Several months later in July 1771, Abba was still in mourning  for Johnie, engaging in the practice of 'throwing water' and participating in communal songs and drumming in his honor."
+P20,JOHNIE,,BROTHER OF,MARY,P21,ABBA'S MARY,
+P20,JOHNIE,,BROTHER OF,,P443,NEPTUNE [ABBA'S SON],
+,,,,,,#N/A,
+P21,MARY,,DAUGHTER OF,ABBA,P6,ABBA,"Mary was born in January 1762, the first daughter/child of Abba, an African young woman and Neptune, an enslaved man belonging to a white man named Emotson, one of Thistlewood's friends who also owned a tavern in Savanna la Mar. She had three surviving siblings: Johnie, Neptune, and Jenny.
+
+In March/April of 1763, Mary contracted smallpox; though she ultimately recovered from the disease itself, she was permanently blinded. 
+
+The diary describes Mary as having one husband/domestic partner on a neighboring sugar estate called Three Mile River named Quacoo with whom she had two children: one daughter born in 1784 who died at 1 week old, aand another daughter born in 1785 named Prue who was still alive by the time of Thistlewood's death inn 1786.
+
+Like her mother, Mary outlived Thistlewood. Inan appraisal of the complete inventory of all his human property, her value was estimated to be just 1 pound."
+P21,MARY,,DAUGHTER OF,,P445,NEPTUNE [THOMAS EMOTSON'S],
+P21,MARY,,SISTER OF,JOHNIE,P20,ABBA'S JOHNIE,
+P21,MARY,,SISTER OF,,P443,NEPTUNE [ABBA'S SON],
+P21,MARY,,MOTHER OF,,P453,ABBA'S MARY'S DAUGHTER (1784),
+P21,MARY,,MOTHER OF,,P454,"PRUE [DAUGHTER OF MARY, GRANDDAUGHTER OF ABBA]",
+,,,,,,#N/A,
+P442,JENNY [ABBA'S DAUGHTER],,DAUGHTER OF,,P6,ABBA,
+P442,JENNY [ABBA'S DAUGHTER],,DAUGHTER OF,,P24,LINCOLN,
+P442,JENNY [ABBA'S DAUGHTER],,SISTER OF,,P21,ABBA'S MARY,
+P442,JENNY [ABBA'S DAUGHTER],,SISTER OF,,P443,NEPTUNE [ABBA'S SON],
+P442,JENNY [ABBA'S DAUGHTER],,SISTER OF,,P20,ABBA'S JOHNIE,
+,,,,,,#N/A,
+P443,NEPTUNE [ABBA'S SON],,SON OF,,P6,ABBA,
+P443,NEPTUNE [ABBA'S SON],,SON OF,,P445,NEPTUNE [THOMAS EMOTSON'S],
+P443,NEPTUNE [ABBA'S SON],,BROTHER OF,,P442,JENNY [ABBA'S DAUGHTER],
+P443,NEPTUNE [ABBA'S SON],,BROTHER OF,,P20,ABBA'S JOHNIE,
+P443,NEPTUNE [ABBA'S SON],,BROTHER OF,,P21,ABBA'S MARY,
+,,,,,,,
+P22,LITTLE PHIBBAH,,DAUGHTER OF,NANNY,P15,NANNY,"Little Phibbah was born in August 1766 at Paradise Estate in ""the height of bad weather"" to an enslaved African woman named Nanny and an unknown father. A midwife named Paradise Quasheba was in attendance at her birth.
+
+Little Phibbah was frequently ill and cared for by her mother. When she was five years old, she became very badly afflicted with stomach worms. After being treated repeatedly by her mother, Thistlewood and white physicians over the course of several days, she died on September 9 1771. Two enslaved men named Lincoln and Abasse dug her grave and buried her the next evening."
+P22,LITTLE PHIBBAH,,SISTER OF,,,#N/A,
+,,,,,,#N/A,
+P23,SHIPMATE,,AFRICAN,,,#N/A,"In November of 1770, an enslaved ""Ebo"" woman named Molia made her seventh esacpe from Breadnut Island Pen. She stayed missing for eleven days before being caught at a place called Bluefields Bay and brought back to the Pen. At some point during this recovery Molia told someone that she had gone to Bluefields Bay for a specific purpose; this purpose was to see a person she desccribed as her ""shipmate"". 
+
+This unnamed/unidentified person was Molia's shipmate with whom she had, presumably, survived hte Middle Passage voyage at least nearly a decade earlier and with whom she had maintained a close and intimate relationship. It is the first and on;y time that this Shipmate would ever be mentioned in the diary."
+P23,SHIPMATE,,SHIPMATE OF,MOLIA,P1,MOLIA,
+,,,,,,#N/A,
+P24,LINCOLN,,IGBO ,,,#N/A," Lincoln first appears in the diary in Janury of 1756 as the very first enslaved person Thistlewood purchased for 43 pounds. Presumed to be an ""Ebo"", he was described as being 16 years of age, and 4 ft 9 inches tall.
+
+ Throughout the course of those three decades, Thistlewood regularly appointed him to skilled positions such as a fisherman and a driver of the field gangs. He regularly entrusted him with the use and possession of a gun with which to hunt game and also regularly sent him out to search for and retrieve the most troublesome of runaways. Lincoln was the most frequent recipient of Thistlewood’s castoff clothes and worn possessions that he no longer wanted. The rations of food and rum he received were markedly higher than nearly everyone else’s. 
+Lincoln had multiple domestic and sexual relationships, including one with an Egypt field woman named Violet, another named Egypt Susanah, and another African domestic laborer owned by Thistlewood named Abba. Lincoln and Abba would have two children together: a daughter named Jenny born in August of 1772, and a daughter named Phibbah born in April of 1776. Lincoln's longest core relationship however, was with Sukey, an African young woman who Thistlewood purchased in 1761 from a trader named John Hutt; they never had any children. Many of Lincoln's relationships with women were fraught with tension, even to the point of domestic violence.
+
+Lincoln would be one of the enslaved population on Breadnut Island Pen who would go on to outlive Thistlewood past his death in 1786. Presumed to be 47 years old in a 2787 appraisal, his value was assessed at 50 pounds."
+P24,LINCOLN,,DOMESTIC PARTNER OF,SUKEY,P37,SUKEY,
+P24,LINCOLN,,DOMESTIC PARTNER OF,,P117,VIOLET,
+P24,LINCOLN,,DOMESTIC PARTNER OF,,P296,EGYPT SUSANAH,
+P24,LINCOLN,,FATHER OF,,P442,JENNY [ABBA'S DAUGHTER],
+P24,LINCOLN,,FATHER OF,,P455,PHIBBAH [ABBA & LINCOLN'S DAUGHTER],
+,,,,,,#N/A,
+P105,DIDO,,MOTHER OF,,P168,JOAN,
+P105,DIDO,,FIELD GANG [FIRST],,P134,BETTY,
+P105,DIDO,,FIELD GANG [FIRST],,P27,WANGA,
+P105,DIDO,,FIELD GANG [FIRST],,P33,ELLIN,
+P105,DIDO,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P105,DIDO,,FIELD GANG [FIRST],,P106,SARAH,
+P105,DIDO,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P134,BETTY,,MOTHER OF,,P169,LITTLE AGNES,
+P134,BETTY,,DOMESTIC PARTNER OF,,P170,AMBO,
+P134,BETTY,,FIELD GANG [FIRST],,P124,AGNES,
+P134,BETTY,,FIELD GANG [FIRST],,P105,DIDO,
+P134,BETTY,,FIELD GANG [FIRST],,P27,WANGA,
+P134,BETTY,,FIELD GANG [FIRST],,P33,ELLIN,
+P134,BETTY,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P134,BETTY,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+P134,BETTY,,FIELD GANG [FIRST],,P106,SARAH,
+,,,,,,#N/A,
+P27,WANGA,PRINCESS,MOTHER OF,,P171,LITTLE DICK,"Wanga was an African woman who was purchased and brought to Egypt to work as field laborer in May of 1754 shortly after Thistlewood's arrival in the early 1750's. Upon her purchase, she was renamed ""Princess,"" and paired with another enslaved woman named Quashe who served as her 'seasoner'.  
+
+Wanga would have several confirmed sexual/domestic partners over the course of the sixteen years that Thistlewood served as overseer at Egypt. Among them were a driver named Hazat, and an Ebo man and skilled laborer named Cyrus, with whom she had a son in January of 1757 named Little Dick.
+
+Although he survived his first two years of life, Little Dick was badly afflicted with yaws, a severe bacterial infection that resulted in skin lesions, joint inflammation and bone pain/deformities. In July of 1759, Little Dick passed away from the complications of yaws. Two months later Wanga and his father, Cyrus, would go on to hold a ""feast"" (funeral ceremony) in his honor.
+
+In 1761, Wanga was assigned to be the seasoner of an estimated 15 year old 'Ebo' young woman named Molia who had been purchased by Thistlewood and who he renamed 'Coobah'. 
+
+Wanga ran away from the estate once in the spring of 1762. She was also pregnant at the time of her escape. Daniel, a skilled laborer was sent to search for and return her to the estate. She was later sent to Paradise estate to lie-in and give birth to a daughter named Charlotte, who survived at least until her second year."
+P27,WANGA,PRINCESS,MOTHER OF,,P456,CHARLOTTE (WONGA'S DAUGHTER),
+P27,WANGA,PRINCESS,DOMESTIC PARTNER OF,,P210,CYRUS,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P105,DIDO,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P134,BETTY,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P33,ELLIN,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P106,SARAH,
+P27,WANGA,PRINCESS,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P33,ELLIN,,MOTHER OF,,P172,ELLIN'S CHILD,
+P33,ELLIN,,IGBO ,,,,
+P33,ELLIN,,FIELD GANG [FIRST],,P105,DIDO,
+P33,ELLIN,,FIELD GANG [FIRST],,P134,BETTY,
+P33,ELLIN,,FIELD GANG [FIRST],,P27,WANGA,
+P33,ELLIN,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P33,ELLIN,,FIELD GANG [FIRST],,P106,SARAH,
+P33,ELLIN,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P30,MOUNTAIN LUCY,,MOTHER OF,,P173,MOUNTAIN LUCY'S CHILD,"Mountain Lucy was an enslaved fieldwoman who lived and worked on Egypt estate from as early as 1754. 
+
+Like many other fieldhands, Mountain Lucy lived in conditions of immense poverty and food scarcity. Throughout periods of particularly severe famine and droughts on the estate, she appeared to have engaged in a coercive sexual relationship with Thistlewood in exchange for food, ""bitts"" (money), and other presents. 
+
+In 1755, when Egypt's domestic housekeeper Phibbah became pregnant, she  ""brought"" Mountain Lucy to Thistlewood to ""keep"" as a ""sweetheart"" (sexual partner) while she was in her latter trimester of pregnancy. Thistlewood initially resisted the arrangement, but eventually relented.
+
+Mountain Lucy was the mother of at least four children. In 1756, she gave birth to a girl, Prue, who managed to survive at least until the age of 8 (an enormous milestone for enslaved chilren in Jamaica), and who Mountain Lucy claimed had been fathered by Thistlewood, presumably duringPhibbah';s lying in period (although he denied this). Between 1758 and 1759, she gave birth to two boys, once each year, who both died within days. Another girl, Flora would follow in 1761 and survive until at least the age of 3. 
+
+Mountain Lucy ran away from the estate at least twice in 1756. She was found within days on both occasions and punished with brutal floggings and gaggings. She was also punished on multiple occasions for giving verbal protests to the drivers in the field"
+P30,MOUNTAIN LUCY,,MOTHER OF,,P175,MOUNTAIN LUCY'S CHILD #2,
+P30,MOUNTAIN LUCY,,MOTHER OF,,P270,FLORA [MOUNTAIN LUCY'S CHILD],
+P30,MOUNTAIN LUCY,,MOTHER OF,,P458,PRUE [MOUNTAIN LUCY'S DAUGHTER],
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P105,DIDO,
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P134,BETTY,
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P27,WANGA,
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P33,ELLIN,
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P106,SARAH,
+P30,MOUNTAIN LUCY,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,,
+P173,MOUNTAIN LUCY'S CHILD,,,,,,
+P173,,,,,,,
+,,,,,,#N/A,
+P106,SARAH,,MOTHER OF,,P174,SARAH'S CHILD/SON,
+P106,SARAH,,MOTHER OF,,P376,SARAH'S CUBBAH,
+P106,SARAH,,FIELD GANG [FIRST],,P105,DIDO,
+P106,SARAH,,FIELD GANG [FIRST],,P134,BETTY,
+P106,SARAH,,FIELD GANG [FIRST],,P27,WANGA,
+P106,SARAH,,FIELD GANG [FIRST],,P33,ELLIN,
+P106,SARAH,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P106,SARAH,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P170,AMBO,,FATHER OF,,P416,TOBBI (AMBO'S CHILD),
+P170,AMBO,,FATHER OF,,P169,LITTLE AGNES,
+P170,AMBO,,FATHER OF,,P421,AGNES & AMBO'S CHILD #1,
+P170,AMBO,,DOMESTIC PARTNER OF,,P134,BETTY,
+P170,AMBO,,DOMESTIC PARTNER OF,,P124,AGNES,
+,,,,,,#N/A,
+P210,CYRUS,,FATHER OF,,P171,LITTLE DICK,"Cyrus was an enslaved man who lived/worked upon Egypt estate as a field hand. Presumed to be an 'Ebo' Cyrus was often tasked with performing a number of different skilled jobs around the estate, going out to search for and retrieve runaways, and even more frequently sent to fish in the nearby rivers and streams througout the parish.
+
+Cyrus was confirmed as having two sons: a boy named Sawney with an undientified mother, and a boy named Little Dick with Wonga, an African fieldwoman who was born in 1757 and lived to the age of two before dying from complications of yaws disease. In the months following Little Dick's death, Cyrus mourned his loss by throwing a ""feast"" (a funeral celebration) in his son's honor. "
+P210,CYRUS,,FATHER OF,,P457,SAWNEY [CYRUS' SON],
+P210,CYRUS,,DOMESTIC PARTNER OF,,P27,WANGA,
+,,,,,,#N/A,
+P124,AGNES,,DOMESTIC PARTNER OF,,P170,AMBO,
+P124,AGNES,,MOTHER OF,,P421,AGNES & AMBO'S CHILD #1,
+P124,AGNES,,SISTER OF,,P134,BETTY,
+P124,AGNES,,FIELD GANG [FIRST],,P105,DIDO,
+P124,AGNES,,FIELD GANG [FIRST],,P134,BETTY,
+P124,AGNES,,FIELD GANG [FIRST],,P27,WANGA,
+P124,AGNES,,FIELD GANG [FIRST],,P33,ELLIN,
+P124,AGNES,,FIELD GANG [FIRST],,P30,MOUNTAIN LUCY,
+P124,AGNES,,FIELD GANG [FIRST],,P106,SARAH,
+P124,AGNES,,FIELD GANG [FIRST],,P3,EGYPT LUCY,
+,,,,,,#N/A,
+P26,SOLON,,DOMESTIC PARTNER OF,,P13,OGO,"Solon first appears in the diaries in July of 1761 when he was acquired by John Cope on Thistlewood's behalf from a slave market in Kingston alongside two others: an African woman named Nanny and an African young man named Caesar. Thistlewood paid 50 pounds for each one of them. He also described Solon as being ""about 16"". 
+
+In later years, Solon would (like many others) be taken ill with various ailments and diseases such as stomach cramps, guinea worms, eye infections, and yaws.
+
+Solon was a skilled fisherman and was often sent by Thistlewood to catch fish for him in nearby rivers and streaams. He was also frequently sent out to search for escaped runaways, particularly a young 'Ebo' woman named Molia who ran away from Thistlewood at least 14 times between 1769-1774.
+
+Solon was the domestic partner/'husband' of Ogo (renamed 'Maria'), a presumed 'Ebo' African young woman purchased by Thistlewood from a slave trader named John Hutt in December of 1761. They had at least one child together: a daughter named Lucy, b0rn in November of 1766, who lived to the age of ten before dying in 1777 from stomach ailments.
+
+"
+P26,SOLON,,FATHER OF,,P14,LUCY,
+P26,SOLON,,SHIPMATE OF,,P15,NANNY,
+P26,SOLON,,SHIPMATE OF,,P451,CAESAR,
+,,,,,,#N/A,
+P25,MASON QUASHE,,DOMESTIC PARTNER OF,,P3,EGYPT LUCY,"Mason Quashe was an enslaved man who belonged to Elizabeth Anderson, a ""free coloured (mixed race) woman""who was the mistress of William Dorrill, Thistlewood's first empoyer and the initial owner of Egypt, Salt River and Paradise upon his arrival in Jamaica. She frequently hired Mason Quashe out to Egypt and other estates throughout the parish where he performed a wide array of skilled and very highly sought after labors such as masonry, carpentry, fishing, and driving of the field gangs. He was 'paid' for these labors in rum and castoff clothing from white men.  
+
+Mason Quashe was a prominent figure in the enslaved community of Westmoreland, and held close relationships with other prominent figures in that community such as Phibbah, the housekeeper of Egypt, and the other women in her social circle such as House Franke and Egypt Lucy, who tended/cared for him in times of illness.  
+
+Mason Quashe had a number of sexual/domestic relationships with several enslaved women throughout the neighborhood, including one with Egypt field woman Egypt Lucy, who left her previous husband Daniel for him--their union rrsulted in a son born in December of 1759: Little Quashe. He also had another child, a daughter named Franke who lived on a neighboring estate.
+
+Mason Quashe's status as a skilled laborer seemed to give him a relative amount of privilege, particularly in his abilty to move around the parish, and beyond it. In 1767, he traveled abroad to British North America, where he would pass away from complications of gout and stomach maladies in 1767. "
+P25,MASON QUASHE,,FATHER OF,,P5,LITTLE QUASHE,
+,,,,,,#N/A,
+,,,,,,#N/A,
+,,,,,,#N/A,
