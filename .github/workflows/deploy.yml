@@ -22,8 +22,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Check the CSV data
-        run: node scripts/validate.mjs
+      - name: Install the spreadsheet reader
+        run: npm install xlsx@0.18.5 --no-save
+      - name: Check the workbook data
+        run: node validate.mjs
 
   deploy:
     needs: validate
@@ -37,8 +39,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp kim_relationships.csv _site/
-          cp kim_glossary.csv _site/
+          cp "KINSHIP IN MOTION DATABASE_FOR_UPLOAD.xlsx" _site/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
