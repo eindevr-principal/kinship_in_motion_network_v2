@@ -25,7 +25,7 @@ jobs:
       - name: Install the spreadsheet reader
         run: npm install xlsx@0.18.5 --no-save
       - name: Check the workbook data
-        run: node validate.mjs
+        run: node scripts/validate.mjs
 
   deploy:
     needs: validate
