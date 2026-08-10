@@ -12,66 +12,72 @@ Live site: https://eindevr-principal.github.io/kinship_in_motion_network_v2/
 
 | File | What it is |
 |------|------------|
-| `kim_glossary.csv` | One row per **person** (and per location). Names, ethnicity, locations, biography. This is your list of people. |
-| `kim_relationships.csv` | One row per **relationship** between two people. |
-| `index.html` | The webpage that draws the network. You rarely need to touch this. |
-| `scripts/validate.mjs` | Automatically checks your data for mistakes before publishing. |
+| `KINSHIP IN MOTION DATABASE_FOR_UPLOAD.xlsx` | The **one file the client maintains.** The site reads its `GLOSSARY` and `RELATIONSHIPS` tabs. |
+| `index.html` | The webpage that draws the network. You rarely touch this. |
+| `validate.mjs` | Automatically checks the data for mistakes before publishing. |
 | `.github/workflows/deploy.yml` | The automation that checks the data and publishes the site. |
 
-You no longer need a separate merged `kim_version_1.csv` — the page joins the two
-files together itself, every time it loads.
+The site only reads two tabs — `GLOSSARY` and `RELATIONSHIPS`. The other tabs in
+the workbook (EVENTS, LookUp, working sheets, etc.) are ignored, so they can stay.
 
 ---
 
-## How to update the data (the whole point)
+## Updating the site — the simple version (for the client)
 
-You edit the spreadsheets **right on GitHub** — no download, no software, no code.
+**She never exports CSVs and never picks a sheet.** She edits the workbook and
+replaces one file. Here is the whole routine, start to finish:
 
-1. Go to the repository on GitHub and click the file you want to change
-   (`kim_glossary.csv` to add/edit a person, `kim_relationships.csv` to add/edit
-   a relationship).
-2. Click the **pencil icon** (✏️ *Edit this file*) in the top-right.
-3. Make your edits and click the green **Commit changes** button.
-4. That's it. Within a minute or two the live site rebuilds itself with your
-   changes. You can watch it happen under the repo's **Actions** tab — a green
-   check ✓ means it published.
+1. Open the workbook, make edits on the **GLOSSARY** or **RELATIONSHIPS** tab,
+   and **Save** (keep the file name exactly the same).
+2. Go to the repository on GitHub and click the file
+   **`KINSHIP IN MOTION DATABASE_FOR_UPLOAD.xlsx`**.
+3. Click the **trash-can icon** to delete it, then **Commit changes**.
+   (Deleting first is the reliable way to replace a file on GitHub.)
+4. Click **Add file → Upload files**, drag in the freshly saved workbook — it
+   **must have the same file name** — and **Commit changes**.
+5. Done. Within a minute or two the live site updates itself. A green check ✓
+   under the **Actions** tab means it published.
 
-Prefer working in Excel or Google Sheets? Edit there, export as CSV with the
-**same file name**, and drag it onto the file on GitHub to replace it. Just keep
-the column headers exactly as they are.
+That's the entire process: *save, delete the old file, upload the new one.*
+
+> **Important:** the uploaded file's name must stay exactly
+> `KINSHIP IN MOTION DATABASE_FOR_UPLOAD.xlsx`. If it's saved under a new name
+> (for example with a date on the end), the site won't find it. Keep one file,
+> same name, every time.
 
 ### If something in the data is wrong
 
-Before publishing, the automation checks your spreadsheets. If it finds a problem
-— a relationship pointing to a person who isn't in the glossary, a duplicated
-person ID, a location used where a person belongs — it **stops and shows a red X**
+Before publishing, the automation checks the workbook. If it finds a problem — a
+relationship pointing to a person who isn't in the glossary, a duplicated person
+ID, a location used where a person belongs — it **stops and shows a red X**
 instead of publishing a broken graph. Click the failed run under the **Actions**
-tab and you'll see a plain-English message like:
+tab for a plain-English message like:
 
 ```
-Relationships (row 47): relation ID "P9999" is not in the glossary (label "FRIEND OF").
+RELATIONSHIPS row 47: relation ID "P9999" is not in the glossary (type "FRIEND OF").
 ```
 
-Fix that row, commit again, and it republishes. The old site stays up in the
+Fix that row in the workbook and re-upload. The old site stays up in the
 meantime, so a typo never takes the graph down.
 
 ---
 
-## How the two spreadsheets fit together
+## How the two tabs work together
 
-Every person has a **PERSON ID** like `P1`, `P2` in the glossary. A relationship
-row links two of those IDs:
+Every person has a **PERSON ID** like `P1`, `P2` on the GLOSSARY tab. A row on the
+RELATIONSHIPS tab links two of those IDs:
 
 - **PERSON ID** — the person the relationship is *from* (e.g. `P1`)
-- **Label** — the kind of relationship (e.g. `MOTHER OF`)
+- **RELATIONSHIP** — the kind of relationship (e.g. `MOTHER OF`)
 - **RELATION IDS** — the person the relationship is *to* (e.g. `P2`)
 
-So `P1 · MOTHER OF · P2` draws a line between Molia and Silvia.
+So `P1 · MOTHER OF · P2` draws a line between Molia and Silvia. Rows with a type
+but no RELATION ID are treated as notes, not connections.
 
-Rows with a Label but **no RELATION ID** (like `GARDENER`) are treated as notes,
-not connections, so they don't add a line to the graph.
+The site matches these columns loosely (it accepts `RELATIONSHIP` or `Label`,
+`LOCATION(S)` or `LOCATIONS`, and so on), so small header changes won't break it.
 
-Relationships are grouped into three color families on the graph:
+Relationships are grouped into three colors:
 
 - **Family & kinship** — mother/father/daughter/son/sister/brother, partners, housemates
 - **Labor & care** — field gang, midwife, nurse, gardener, business partner, seasoning
@@ -81,61 +87,34 @@ Relationships are grouped into three color families on the graph:
 
 ## Using the site
 
-- **Click a person** to open their full biography and every relationship they have.
+- **Click a person** for their full biography and every relationship they have.
 - **Search** by name in the top-right box to jump to anyone.
 - **Filter** to a single relationship type, or click a color in the legend to
   show/hide a whole family.
 - Bigger dots = more connections. Drag to pan, scroll to zoom.
 
-Everyone in the glossary appears — all 491 people. The 96 who currently have
-relationships form the connected network in the middle; the remaining people are
-shown as faint dots in an outer ring (still searchable and clickable for their
-biography) and will move into the network automatically as soon as you add a
-relationship for them in `kim_relationships.csv`. You can hide that outer ring
-with the **Unconnected people** toggle in the legend.
+Everyone in the glossary appears. People who already have relationships form the
+connected network in the middle; the rest are faint dots in an outer ring (still
+searchable and clickable) that move into the network automatically as soon as a
+relationship is added for them. The **Unconnected people** legend toggle hides
+that ring.
 
 ---
 
-## One-time setup (only needed once, ever)
+## One-time setup (already done, kept for reference)
 
-For the automatic publishing to work, GitHub Pages has to be told to publish from
-the automation:
-
-1. In the repository, go to **Settings → Pages**.
-2. Under **Build and deployment → Source**, choose **GitHub Actions**.
-
-That's the only setting. After that, every commit publishes automatically.
+For automatic publishing, GitHub Pages must be set to publish from the automation:
+**Settings → Pages → Build and deployment → Source → GitHub Actions**. That's the
+only setting; after it, every commit publishes automatically.
 
 ---
 
-## Cleaning up the old project files (optional)
-
-This version replaces the old webpack build. These leftover files from the
-previous setup are no longer used and can be deleted whenever convenient:
-
-- `package.json`, `package-lock.json`, `webpack.config.js`
-- the `src/` folder and any `kim_version_1.csv`
-- the `node_modules/` and `dist/` folders
-
-Nothing breaks if you leave them; removing them just keeps the repo tidy.
-
----
-
-## Previewing on your own computer (optional, for the curious)
-
-You don't need this, but if you ever want to see changes before committing, open
-a terminal in this folder and run any simple web server, e.g.:
+## Checking the data on your own computer (optional, for you — not the client)
 
 ```bash
-python3 -m http.server 8000
+npm install xlsx@0.18.5 --no-save
+node validate.mjs
 ```
 
-Then visit `http://localhost:8000`. (Opening `index.html` directly by
-double-clicking won't work, because browsers block the CSV files from loading
-that way — it needs to be served.)
-
-To check your data the same way the automation does:
-
-```bash
-node scripts/validate.mjs
-```
+To preview the site before committing, run a simple web server in this folder
+(`python3 -m http.server 8000`) and visit `http://localhost:8000`. Opening
